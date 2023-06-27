@@ -8,3 +8,4 @@
 
 (In progress)
 - distinction between named exports, requiring a specific import syntax, and default exports, allowing for a different import approach in React;
+- reviewed benefits of using 'link' tag instead of 'a' tag
