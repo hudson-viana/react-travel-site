@@ -27,6 +27,9 @@ function Navbar() {
                             <a href='#' className='nav-links' onClick={closeMobileMenu}>Products</a>
                         </li>
                         <li className='nav-item'>
+                            <a href='#' className='nav-links' onClick={closeMobileMenu}>To-Do</a>
+                        </li>
+                        <li className='nav-item'>
                             <a href='#' className='nav-links-mobile' onClick={closeMobileMenu}>Sign Up</a>
                         </li>
                     </ul>
