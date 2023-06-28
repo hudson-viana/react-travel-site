@@ -7,5 +7,9 @@
 ## Most Significant Applied Concepts
 
 (In progress)
-- distinction between named exports, requiring a specific import syntax, and default exports, allowing for a different import approach in React;
-- reviewed benefits of using 'link' tag instead of 'a' tag
+>>
+- Reviewed the difference between creating a to-do list using arrays and creating a to-do list using objects;
+- Reviewed the difference between adding and deleting elements from an array and from an object;
+- Reviewed the benefits of .splice()
+- Reviewed distinction between named exports, requiring a specific import syntax, and default exports, allowing for a different import approach in React;
+- reviewed benefits of using 'link' tag instead of 'a' tag;

@@ -1,20 +1,30 @@
 import React, { useState } from "react";
 
 function ToDo() {
-
     const [title, setTitle] = useState('');
-    const [status, setStatus] = useState('Pending');
+    const [status, setStatus] = useState('pending');
+    const [todos, setTodos] = useState([]);
 
     const handleTitleChange = (e) => {
-        setTitle(e.target.value)
+        setTitle(e.target.value);
     }
 
     const handleStatusChange = (e) => {
-        setStatus(e.target.value)
+        setStatus(e.target.value);
     }
 
     const handleSubmit = (e) => {
-        e.preventDefault()
+        e.preventDefault();
+        const newTodo = {title, status};
+        setTodos([...todos, newTodo]);
+        setTitle('');
+        setStatus('pending');
+    }
+
+    const handleDelete = (index) => {
+        const newTodos = [...todos];
+        newTodos.splice(index, 1);
+        setTodos(newTodos);
     }
 
     return (
@@ -27,7 +37,7 @@ function ToDo() {
                     className=""
                     placeholder='Insert your text here'
                 />
-                <select className="" onChange={handleStatusChange}>
+                <select className="" value={status} onChange={handleStatusChange}>
                     <option value='pending' >Pending</option>
                     <option value='completed' >Completed</option>
                 </select>
@@ -36,9 +46,15 @@ function ToDo() {
                     className=""
                 >Add</button>
             </form>
-            <ToDo title={title} status={status} />
+            <ul>
+                {todos.map((todo, index) => (
+                    <li key={index}>
+                        {todo.title} - {todo.status}
+                        <button onClick={() => handleDelete(index)}>Delete</button>
+                    </li>
+                ))}
+            </ul>
         </div>
-
     )
 }
 
