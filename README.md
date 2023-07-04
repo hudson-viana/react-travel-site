@@ -13,3 +13,4 @@
 - Reviewed the benefits of .splice()
 - Reviewed distinction between named exports, requiring a specific import syntax, and default exports, allowing for a different import approach in React;
 - reviewed benefits of using 'link' tag instead of 'a' tag;
+- reviewed difference between `onClick={handleDelete(index)}`and `onClick={() => handleDelete(index)}`
